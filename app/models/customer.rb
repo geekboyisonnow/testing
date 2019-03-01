@@ -1,3 +1,3 @@
 class Customer < ApplicationRecord
-    has_many :goal
+    has_many :goals
 end

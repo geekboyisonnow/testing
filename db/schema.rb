@@ -38,6 +38,4 @@ ActiveRecord::Schema.define(version: 2019_02_28_030856) do
     t.index ["customer_id"], name: "index_goals_on_customer_id"
   end
 
-  add_foreign_key "deposits", "goals"
-  add_foreign_key "goals", "customers"
 end

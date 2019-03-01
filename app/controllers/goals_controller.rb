@@ -1,6 +1,7 @@
 class GoalsController < ApplicationController
   before_action :set_goal, only: [:show, :edit, :update, :destroy]
-
+  protect_from_forgery except: :create
+  
   # GET /goals
   # GET /goals.json
   def index
@@ -69,6 +70,6 @@ class GoalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def goal_params
-      params.require(:goal).permit(:name, :target_amount)
+      params.require(:goal).permit(:name, :target_amount, :customer_id)
     end
 end
